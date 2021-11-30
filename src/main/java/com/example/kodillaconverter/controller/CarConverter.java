@@ -52,7 +52,7 @@ public class CarConverter implements HttpMessageConverter<Object> {
                 builder.append((char) c);
         }
 
-        String[] fields = builder.toString().split("/");
+        String[] fields = builder.toString().split(" - ");
 
         return new Car(fields[0], Integer.valueOf(fields[1]),  Integer.valueOf(fields[2]));
     }
